@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:flutter_test/flutter_test.dart';
 
 import 'TestBean.dart';
@@ -5,7 +7,7 @@ import 'TestBean.dart';
 void main(){
   test("create bean", (){
     // 测试数据
-    var json = {
+    var jsonMap = {
       "outName":"nnn",
       "outAge":12,
       "obj":{
@@ -34,12 +36,14 @@ void main(){
       ]
     };
 
-    var a = TestBean.fromJson(json);
+    var a = TestBean.fromJson(jsonMap);
 
     print(a);
     print(a.datas);
     print(a.obj);
     print(a.outAge);
     print(a.outName);
+    print(a.toJson());
+    print("!!!!!!!!!!!"+json.encode(a));
   });
 }

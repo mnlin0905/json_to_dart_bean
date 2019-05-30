@@ -290,6 +290,7 @@ mixin JsonHolderImpl<T> {
   ///子类需要提供一下自身的生成器
   List provideListListCreator();
 
+  /// toJson 生成的字符串,并非是 json 格式,如果需要json 格式字符串,需要调用 [dart:convert] 包中 json.encode(obj)
   @override
   String toString() {
     return _innerMap.toString();

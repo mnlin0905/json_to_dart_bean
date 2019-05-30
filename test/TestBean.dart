@@ -5,7 +5,7 @@
 
 
 
-import 'package:json_holder_impl/jsonHolderImpl.dart';
+import 'package:json_holder_impl/json_holder_impl.dart';
 
 class TestBean with JsonHolderImpl<TestBean> {
   /// [key : value] => [outName : nnn]
